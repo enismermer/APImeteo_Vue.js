@@ -91,7 +91,7 @@ const app = Vue.createApp({
             this.weather.name = json.name;
             this.weather.iconUrl = this.getWeatherIconUrl(json.weather[0].main);
             this.weather.temperature = parseInt(json.main.temp);
-            this.weather.description = this.getWeatherDescriptionInFrench(json.weather[0].description) ;
+            this.weather.description = this.getWeatherFrenchDescription(json.weather[0].description) ;
             this.weather.humidity = json.main.humidity;
             this.weather.windSpeed = parseInt(json.wind.speed);
             
@@ -124,8 +124,8 @@ const app = Vue.createApp({
         },
 
         // Fonction pour afficher la description de la météo en FRANÇAIS
-        getWeatherDescriptionInFrench(WeatherDescriptionFrench) {
-            switch (WeatherDescriptionFrench) {
+        getWeatherFrenchDescription(englishDescription) {
+            switch (englishDescription) {
                 // en cas de 'clear sky'
                 case 'clear sky':
                     return 'ciel dégagé';
