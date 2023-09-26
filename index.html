@@ -4,43 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API météo</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" type="text/css">
 </head>
 <body>
-    <div class="container">
+    <div id="app" class="container">
         <div class="search-box">
             <i class="fa-solid fa-location-dot"></i>
-            <input type="text" id="zipcodeInput" placeholder="Code postal" onkeypress="if (event.keyCode == 13) getWeatherByZipcode()">
-            <button class="fa-solid fa-magnifying-glass" onclick="getWeatherByZipcode()" ></button>
-            <button class="fa-solid fa-crosshairs" onclick="getLocationAndWeather()"></button>
+            <input type="number" v-model="codePostal" placeholder="Code postal" @keyup.enter="getWeatherByZipcode">
+            <button class="fa-solid fa-magnifying-glass" @click="getWeatherByZipcode"></button>
+            <button class="fa-solid fa-crosshairs" @click="getLocationAndWeather"></button>
         </div>
 
         <div class="weather-box" id="weatherBox">
-            <p class="name"></p>
-            <img src="">
-            <p class="temperature"></p>
-            <p class="description"></p>
+            <p class="name">{{ weather.name }}</p>
+            <img :src="weather.iconUrl">
+            <p class="temperature">{{ weather.temperature }}<span>°C</span></p>
+            <p class="description">{{ weather.description }}</p>
         </div>
 
         <div class="weather-details" id="weatherDetails">
             <div class="humidity">
                 <i class="fa-solid fa-water"></i>
                 <div class="text">
-                    <span></span>
+                    <span>{{ weather.humidity }}%</span>
                     <p>Humidité</p>
                 </div>
             </div>
-            <div class="wind">
+            <div class="wind-speed">
                 <i class="fa-solid fa-wind"></i>
                 <div class="text">
-                    <span></span>
+                    <span>{{ weather.windSpeed }}Km/h</span>
                     <p>Vitesse du vent</p>
                 </div>
             </div>
         </div>
     </div>
 
+    <!----------------------- Font Awesome ----------------------->
     <script src="https://kit.fontawesome.com/58a4fdd9c7.js" crossorigin="anonymous"></script>
+    <!-------------------------- Vue.js -------------------------->
+    <script src="https://unpkg.com/vue@3.3.4/dist/vue.global.js"></script>
+    <!-------------------------- api.js -------------------------->
     <script src="api.js"></script>
 </body>
 </html>

@@ -39,7 +39,6 @@ body{
     width: 80%;
     font-size: 24px;
     font-weight: 500;
-    text-transform: uppercase;
     padding-left: 32px;
 }
 
@@ -48,6 +47,16 @@ body{
     font-weight: 500;
     color: #06283D;
     text-transform: capitalize;
+}
+
+/************************************************ 
+Ça supprimera les flèches de sélection de chiffre
+pour le "<input type="number>" 
+************************************************/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .search-box button{
@@ -78,7 +87,7 @@ body{
 
 .weather-box .name{
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin-top: 1.4em;
 }
 
@@ -116,7 +125,7 @@ body{
     margin-top: 30px;
 }
 
-.weather-details .humidity, .weather-details .wind{
+.weather-details .humidity, .weather-details .wind-speed{
     display: flex;
     align-items: center;
     width: 50%;
@@ -128,7 +137,7 @@ body{
     justify-content: flex-start;
 }
 
-.weather-details .wind{
+.weather-details .wind-speed{
     padding-right: 20px;
     justify-content: flex-end;
 }
