@@ -128,31 +128,31 @@ const app = Vue.createApp({
             switch (englishDescription) {
                 // en cas de 'clear sky'
                 case 'clear sky':
-                    return 'ciel dégagé';
+                    return 'Ciel dégagé';
                 // en cas de 'few clouds'
                 case 'few clouds':
-                    return 'quelques nuages';
+                    return 'Quelques nuages';
                 // en cas de 'scattered clouds'
                 case 'scattered clouds':
-                    return 'nuages épars';
+                    return 'Nuages épars';
                 // en cas de 'broken clouds'
                 case 'broken clouds':
-                    return 'nuages fragmentés';
+                    return 'Nuages fragmentés';
                 // en cas de 'shower rain'
                 case 'shower rain':
-                    return 'averses de pluie';
+                    return 'Averses de pluie';
                 // en cas de 'rain'
                 case 'rain':
-                    return 'pluie';
+                    return 'Pluie';
                 // en cas de 'thumderstorm'
                 case 'thunderstorm':
-                    return 'orage';
+                    return 'Orage';
                 // en cas de 'snow'
                 case 'snow':
-                    return 'neige';
+                    return 'Neige';
                 // en cas de 'mist'
                 case 'mist':
-                    return 'brouillard';
+                    return 'Brouillard';
                 // par défault
                 default:
                     return '';

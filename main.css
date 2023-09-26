@@ -115,7 +115,7 @@ input::-webkit-inner-spin-button {
     color: #06283D;
     font-size: 22px;
     font-weight: 500;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 
 .weather-details{
