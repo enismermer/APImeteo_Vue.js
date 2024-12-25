@@ -48,7 +48,7 @@ const app = Vue.createApp({
     methods: {
     	// Fonction pour obtenir la météo par code postal
         getWeatherByZipcode() {
-            const APIKey = '155071051537a975557b8ad4d1e37d87';
+            const APIKey = '7cc7f0cc310b6fda191f7338cd921177';
             const france = 'fr';
 
             // Si on tape rien dans la saisie du code postal, il ne s'affichera rien
